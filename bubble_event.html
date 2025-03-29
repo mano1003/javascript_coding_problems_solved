@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        // Capture phase if true, Bubble phase if false (default)
+        document.getElementById("child").addEventListener("click", () => { console.log("Child clicked"); }, true); 
+        function showbutton() {
+            document.getElementById("btnshow").style.visibility = 'hidden';
+        }
+    </script>
+</head>
+<body>
+    <div id="child">Click Me!!
+        
+        <button id="btnshow" onclick="showbutton()">Show</button>
+    </div>
+</body>
+</html>
